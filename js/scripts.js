@@ -300,7 +300,7 @@ const firstName = prompt('Первое имя'),
     secondName = prompt('Второе имя'),
     randomNumber = Math.floor(Math.random() * 100)
 
-if (randomNumber <= 33 && firstName != null && secondName != null  && firstName != '' && secondName != '') {
+if (randomNumber <= 33 && firstName != null && secondName != null  && firstName !='' && secondName !='') {
     alert(`Итог ${firstName} + ${secondName} = ${randomNumber} поищи еще`)
 } else if (randomNumber >= 34 && randomNumber <= 66 && firstName != null && secondName != null && firstName != '' && secondName != '') {
     alert(`Итог ${firstName} + ${secondName} = ${randomNumber} неплохо, но может біть лучьше`)
@@ -309,7 +309,10 @@ if (randomNumber <= 33 && firstName != null && secondName != null  && firstName 
 } else {
     alert(` что-то пошло не так, еще раз`)
 }
-*/
+console.log(firstName)
+console.log(secondName)
+ */
+
 
 'use strict'
 
@@ -513,7 +516,6 @@ console.log(slavik.calcAge())
 
 
 
-
 /*
 const firstName = 'John'
 const lastName = 'Travolta'
@@ -538,6 +540,646 @@ const larisa =  {
 console.log(slavik.calcAge())
 console.log(larisa.calcAge())
 */
+
+/*
+const userAge = prompt('Введите свой год рождения')
+const userCity = prompt ('Введите город с котором Вы живете')
+const userSport = prompt('Введите любимый вид спорта')
+const nowYear = 2023
+const cityFirst = 'Київ'
+const citySecond = 'Вашингтон'
+const cityThird = 'Лондон'
+const sportFirst = 'Греко-римська боротьба'
+const sportSecond = 'Футбол'
+const sportThird = 'Бокс'
+const sportFirstAthlete = 'Беленюк Жан'
+const sportSecondAthlete = 'Шевченко Андрій'
+const sportThirdAthlete = 'Олександр Усик'
+let userCityLive
+let ageOfUserStri
+let userDoSport
+
+
+if(userAge) {
+    ageOfUserStri = nowYear - userAge
+}else if (userAge === null || userAge === undefined) {
+    ageOfUserStri = 'Шкода, що Ви не захотіли ввести свій вік'
+} else {
+    ageOfUserStri = '1Шкода, що Ви не захотіли ввести свій вік'
+}
+
+
+if (userCity === cityFirst || userCity === citySecond || userCity === cityThird){
+    userCityLive = `Ти живеш у столиці ${userCity}`
+} else if(userCity){
+    userCityLive = `Ти живеш у місті ${userCity}`
+}else if (userCity === null || userCity === undefined) {
+    userCityLive = 'Шкода, що Ви не захотіли ввести свое місто'
+} else {
+    userCityLive = '1Шкода, що Ви не захотіли ввести свое місто'
+}
+
+
+if (userSport === sportFirst){
+    userDoSport = `Круто! Хочеш стати ${sportFirstAthlete}`
+} else if(userSport === sportSecond) {
+    userDoSport = `Круто! Хочеш стати ${sportSecondAthlete}`
+} else if(userSport === sportThird) {
+    userDoSport = `Круто! Хочеш стати ${sportThirdAthlete}`
+} else if (userSport) {
+    userDoSport = `Круто! Ти займаєшся ${userSport}`
+} else if (userSport === null || userSport === undefined) {
+    userDoSport = 'Шкода, що Ви не захотіли ввести свій вид спорту'
+} else {
+    userDoSport = '1Шкода, що Ви не захотіли ввести свій вид спорту'
+}
+
+alert(`${ageOfUserStri} ${userCityLive} ${userDoSport}`)
+*/
+
+
+
+// let comma = '';
+//
+// for(let i = 10; i <=20; i++){
+//     comma += i; ',';
+//     comma += ',';
+//     // alert(i)
+// }
+// console.log(comma);
+
+
+
+
+// let email = prompt('Введи свой эмэил:')
+//
+// console.log(email)
+//
+// while (!email || email.length < 10) {
+//     email = prompt('Введи еще раз эмэил!')
+// }
+// alert(`Твой ємєил ${email}`)
+
+
+// var i = 1;
+// var msg = '';
+// while (i < 10) {
+//     msg+= i + ' x 3 = ' + (i * 3) + '<br>';
+//     i++;
+// }
+// document.write(msg);
+
+
+
+
+// document.write("<h1>Таблица умножения</h1>");
+// for (let j = 1; j <= 10; j++){
+//     document.write("<div style='float: left; width: 70px;'>");
+//     for (let i = 1; i <=10; i++)
+//     {
+//         document.write(i + "*" + j + "=" +(i*j) + "<br>");
+//     }
+//     document.write ("</div>");
+// }
+
+// let userName = 'Славик'
+// function showMessage (){
+//     userName = 'Петя!!!'
+//     let message = 'Привет! Я JavaScript!' + userName;
+//     alert(message);
+// }
+// alert(userName);
+// showMessage();
+// // showMessage();
+// alert(userName);
+
+
+
+
+
+
+/*
+let arr = [12, 3, 5, 7, 8, 10];
+
+for (let i = 0; i < arr.length; i++){
+//
+  for(let j = 0; j < arr.length - i; j++){
+      if(arr[j] > arr[j + 1]){
+          let tmp = arr[j];
+          arr[j] = arr[j + 1];
+          arr[j + 1] = tmp;
+      }
+  }
+  //
+}
+console.log(arr)
+*/
+
+
+
+/*
+let arr = [1, 2, 3]
+
+let arr2 = [7,8,9]
+
+arr.concat(arr2)
+
+console.log(arr)
+console.log(arr2)
+
+let arr3 = arr.concat(arr2, 800, 193, 'slavik')
+console.log(arr3)
+
+
+console.log(arr3[arr3.length - 1])
+
+const newMas = arr2[2];
+console.log(newMas)
+
+arr3.push('good')
+console.log(arr3)
+
+arr3.unshift('100')
+console.log(arr3)
+
+arr3[arr3.length - 1] = 'no good'
+console.log(arr3)
+
+arr3[15] = 500;
+console.log(arr3[16])
+console.log(arr[arr.length - 4])
+
+let newArr10 = [1, 4, 8, 2, 5, 10, 9]
+
+let slavikNewArr = newArr10.indexOf(11)
+console.log(slavikNewArr)
+
+
+
+// let newArr8 = [1, 4, 1, 2, 3, 10, 2, 3, 5];
+// let newArr8Slavik = [];
+//
+// for (let i = 0; i < newArr8.length; i++){
+//     if(newArr8Slavik.indexOf(newArr8[i]) === -1) {
+//         newArr8Slavik.push(newArr8[i])
+//     }
+// }
+// console.log(newArr8Slavik)
+// console.log(newArr8.length)
+
+let newSlaArr1 = [1, 4, 1, 2, 3, 10, 2, 3, 5];
+let newArr8Slavik = [];
+newSlaArr1.forEach((valueOne) =>{
+    if(!newArr8Slavik.includes(valueOne)){
+        newArr8Slavik.push(valueOne)
+    }
+});
+
+console.log(newArr8Slavik)
+
+let newArrSlav = newSlaArr1.slice(3, 6)
+console.log(newArrSlav)
+console.log(newSlaArr1)
+
+let newArrTest = newSlaArr1.splice(3, 5, 'peta', 'vasilii')
+console.log(newArrTest)
+console.log(newSlaArr1)
+
+*/
+
+// const mappedUsers = users.map((x) => ({"balance": x.balance * 2}));
+
+// const mappedUsers = users.map((x) => ({
+
+//     newLook1: x.phone,
+//     newLook2: x.address,
+//     }));
+// console.log(users)
+// console.log(mappedUsers)
+// let arr = ['a', 'b', 'c', 'd', 'f', 'e', 'd', 'c', 'd']
+
+
+// const newElem = arr.find(x => x === 'f')
+// console.log(newElem)
+// const elemNew = users.filter(x => x.isActive === false)
+
+// console.log(elemNew)
+// const elemNew = arr.filter((x) => x === 'd')
+
+// console.log(elemNew)
+// console.log(arr)
+// let arr3 = ['apple', 'banana'];
+
+
+// let arr4;
+// if(arr3.indexOf('apple') !== -1){
+//     arr4 = 'APPLES';
+// }
+// console.log(arr4)
+// let arr5 = [1, 3, 5, 4, 2, 1, 5, 4, 1, 2, 3];
+
+
+// let newArr5 = [];
+// arr5.forEach(x => {
+//     if(newArr5.indexOf(x) === -1){
+//         newArr5.push(x)
+//     }
+// })
+// console.log(newArr5)
+// let arr10 = ['a', 'b', 'c', 'd', 'f', 'e', 'd', 'c', 'd']
+
+
+
+// let arr11 = arr10.splice(3, 2, 'end', 'start', 5, 6)
+// console.log(arr11)
+// console.log(arr10)
+
+
+
+/*
+let users = [
+    {
+        "index": 0,
+        "isActive": true,
+        "balance": 2226.60,
+        "name": "Eugenia Sawyer",
+        "gender": "female",
+        "phone": "+1 (840) 583-3207",
+        "address": "949 John Street, Rose, Puerto Rico, 1857"
+    },
+    {
+        "index": 1,
+        "isActive": true,
+        "balance": 2613.77,
+        "name": "Pauline Gallegos",
+        "gender": "female",
+        "phone": "+1 (985) 593-3328",
+        "address": "328 Greenpoint Avenue, Torboy, North Dakota, 6857"
+    },
+    {
+        "index": 2,
+        "isActive": false,
+        "balance": 3976.41,
+        "name": "Middleton Chaney",
+        "gender": "male",
+        "phone": "+1 (995) 591-2478",
+        "address": "807 Fleet Walk, Brutus, Arkansas, 9783"
+    },
+    {
+        "index": 5,
+        "isActive": false,
+        "balance": 1790.56,
+        "name": "Suzette Lewis",
+        "gender": "female",
+        "phone": "+1 (837) 586-3283",
+        "address": "314 Dunne Place, Bawcomville, Guam, 9053"
+    }
+];
+
+
+const lineItems = [
+    {
+        description: 'Eggs',
+        quantity: 1,
+        price: 3,
+        // total: 3
+    },
+    {
+        description: 'Cheese',
+        quantity: 0.5,
+        price: 5,
+        // total: 2.5
+    },
+    {
+        description: 'Butter',
+        quantity: 2,
+        price: 6,
+        // total: 12
+    },
+];
+
+const mappedLinIt = lineItems.map((x) =>({
+    newName1: x.description,
+    newName2: x.price,
+}));
+
+console.log(lineItems)
+console.log(mappedLinIt)
+
+
+let arr = ['a', 'b', 'c', 'd', 'f', 'e', 'd', 'c', 'd'];
+
+const elem = lineItems.filter(x => x.price <= 6)
+console.log(elem)
+
+
+
+
+
+
+// const newLine = lineItems.map(function (x) {
+//     return {price: x.price};
+// })
+// console.log(newLine)
+
+const newLine = lineItems.find((x) => x.price >= 5 );
+
+console.log(newLine)
+*/
+////////////////////////////////////////////
+
+
+const lineItems2 = [
+    {
+        id: 'a',
+        description: 'Eggs',
+        quantity: 1,
+        price: 3,
+        // total: 3
+    },
+    {
+        id: 'b',
+        description: 'Cheese',
+        quantity: 0.5,
+        price: 5,
+        // total: 2.5
+    },
+    {
+        id: 'c',
+        description: 'Butter',
+        quantity: 2,
+        price: 6,
+        // total: 12
+    },
+];
+
+// const totalSum = lineItems2.reduce((acc, x)=>{
+//     console.log(acc);
+//     return acc + x.price * x.quantity;
+//
+// },0);
+// console.log(totalSum);
+
+
+// const elemFil = lineItems2
+//     .filter((x) => x.quantity < 2)
+//     .map((x) => ({description: x.description}))
+//
+// console.log(elemFil)
+//
+// const elemFil1 = lineItems2.reduce((acc, x) => {
+//     if(x.quantity < 2){
+//         return [...acc, {description: x.description}]
+//     }else {
+//         return acc;
+//     }
+// },[])
+// console.log(elemFil1)
+//
+//
+// const newSome = lineItems2.every((x) => x.price < 10);
+//
+// console.log(newSome)
+
+
+////////////////////////////////////////////////////////////////////////
+// function isNumeric(n) {
+//     return !isNaN(parseFloat(n)) && isFinite(n);
+// }
+//
+// function getIntFromString(str) {
+//     var str_num = "";
+//     var i = 0;
+//
+//     while (i < str.length && !isNumeric(str[i])
+//     && str[i] !== '-')
+//     {
+//         i++;
+//     }
+//
+//     if (str[i] === '-') {
+//         str_num += '-';
+//     }
+//
+//     i = 0;
+//     while (i < str.length) {
+//         str_num += isNumeric(str[i]) ? str[i] : '';
+//         ++i;
+//     }
+//
+//     return parseInt(str_num);
+// }
+//
+// var str = "$3,261.65";
+// var num = getIntFromString(str);
+// console.log(num);
+///////////////////////////////////////////////////////////////////////////
+// let num1 = 2226.60;
+// let num2 = 2613.77;
+// let num3 = 3976.41;
+// let num4 = 1934.58;
+//
+// let all = num1 + num2 + num3 + num4;
+// console.log(all)
+//
+// let newArrSl = users.map((x) => x.balance)
+// console.log(newArrSl)
+
+
+
+
+// let newArr8 = [1111, 4444, 1111, 2222, 3333];
+// let newArr8Slavik = 0;
+// function sum (x) {
+//     for (let i = 0; i < newArr8.length; i++) {
+//         // if(newArr8Slavik.indexOf(newArr8[i]) === -1) {
+//         //     newArr8Slavik.push(newArr8[i])
+//         // }
+//         newArr8[i].slice(1)
+//         newArr8Slavik.push(newArr8[i])
+//     }
+//     return newArr8Slavik
+// }
+// console.log(newArr8Slavik)
+// console.log(newArr8.length)
+//
+//
+//
+// let newArrSlNew = "$3,261.65";
+// let newArrLar = ["$3,261.65"]
+//
+// const newArrSl_2 = newArrSlNew.slice(1)
+// const newArrSl_3 = newArrLar.slice(1)
+// console.log(newArrSl_2)
+// console.log(newArrSl_3)
+
+
+
+
+// let arr = [];
+//  arr = prompt('Введи значение')
+// console.log(arr)
+
+
+// let typeShopOne = prompt("Какой тип товаров будем продавать?" , "Фрукты");
+// let typeShopTwo = prompt("Какой тип товаров будем продавать?" , " Овощи");
+// let typeShopThree = prompt("Какой тип товаров будем продавать?" , " Напитки");
+// let mainList = [];
+// mainList.push(typeShopOne);
+// alert(mainList);
+// console.log(mainList)
+
+
+/*
+let size = prompt('Введи колличество массивов');
+let inputArray = [];
+    size = Number(size);
+for (let i = 0; i < size; i++) {
+    inputArray[i] = prompt('Введи данные для массива номер ' + (i + 1));
+};
+console. log(inputArray);
+document.getElementById("arrPrint1").innerHTML = inputArray;
+
+const inputArrayNumber = inputArray.map(i=>Number(i)); // Переводит строки в цифры
+console. log(inputArrayNumber);
+
+
+const sortInputArrayNumber = inputArrayNumber.sort((a, b) => a - b); //Сортирует массив по возрастаниею
+console.log(sortInputArrayNumber);
+document.getElementById("arrPrint2").innerHTML = sortInputArrayNumber;
+
+let arrayWithElements = sortInputArrayNumber.slice(); // Создает копию массива что бы потом произвести мутацию
+
+
+    arrayWithElements.splice(1, 3); // Удаляет элементы массива с 2 по 4 включительно
+console.log(arrayWithElements);
+document.getElementById("arrPrint3").innerHTML = arrayWithElements;
+*/
+
+
+// const array = [1, 2, 3, 4, 5, 6, 7];
+// function removeElement(array, value ){
+// return delete value(1);
+// };
+// console.log(array);
+// // Результат: [1, 2, 3, 4, 6, 7]
+
+///////////////////////////////////////////////////////////
+
+/*
+const array = [1, 2, 3, 4, 5, 6, 7]
+function removeElement(array, value) {
+
+    return array.filter(function(ele){
+        return ele != value;
+    });
+
+};
+
+let result = removeElement(array, 5);
+// result = [1, 2, 3, 4, 5, 7, 8, 9, 0]
+console.log(array)
+console.log(result)
+*/
+
+/*
+const arr = [2,5,9,1,5,8,5]
+
+function removeItemOnce(arr, value) {
+    let index = arr.indexOf(value);
+    if (index > -1) {
+        arr.splice(index, 1);
+    }
+    return arr;
+}
+
+const arr2 = removeItemOnce(arr, 5)
+// Usage
+console.log(arr)
+console.log(arr2)
+*/
+
+///////////////////////////////////////////////////////////////////
+
+
+/*
+const x = {
+    a: 'hello',
+    b: {
+        internalKey: 12,
+    }
+};
+
+const y = JSON.parse(JSON.stringify(x))
+
+y.b.y = '123';
+console.log(x);
+console.log(y);
+*/
+
+/*
+let love = 'larisa'
+function sayHello (slavik) {
+
+    alert(`hello ${slavik}`)
+}
+
+let newValue = sayHello(love)
+console.log(newValue)
+*/
+
+
+/*
+function getUnkownArgs(separator){
+    let result = '';
+
+    for (let i = 1; i < arguments.length; i++) {
+        result += arguments[i] + separator
+    }
+    return result
+}
+
+const args = getUnkownArgs('===', 'a', 'b', 'c', 'd', 'e')
+console.log(args)
+*/
+
+
+/*
+const getUnkownArgs = (obj) => {
+    obj.b = 'myVal_2'
+};
+
+let myVar = {
+    a: 'myVal'
+};
+
+const args = getUnkownArgs(myVar);
+
+console.log(myVar)
+*/
+
+const diameter = (radius) => {
+    return 2 * radius;
+};
+
+const area = (radius) => {
+    return Math.PI * radius * radius;
+};
+
+const calculate = (radius, logic) => {
+    const output = [];
+    for (let i = 0; i < radius.length; i++) {
+        output.push(logic(radius[i]));
+    }
+    return output;
+};
+
+console.log(calculate([8], area))
+
+
+
+
+
 
 
 
