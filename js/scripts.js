@@ -1158,6 +1158,8 @@ const args = getUnkownArgs(myVar);
 console.log(myVar)
 */
 
+
+/*
 const diameter = (radius) => {
     return 2 * radius;
 };
@@ -1175,6 +1177,303 @@ const calculate = (radius, logic) => {
 };
 
 console.log(calculate([8], area))
+*/
+
+
+
+// const generateKey = (length, possible) => {
+//     const base = possible.length;
+//     let key = '';
+//     for (let i = 0; i < length; i++) {
+//         const index = Math.floor(Math.random() * base);
+//         key += possible[index];
+//     }
+//     return key;
+// };
+//
+// module.exports = { generateKey };
+
+//////////////////////////////////////////////////////////////////
+/*
+function randomString(len, charSet) {
+    charSet = charSet || 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var randomString = '';
+    for (var i = 0; i < len; i++) {
+        var randomPoz = Math.floor(Math.random() * charSet.length);
+        randomString += charSet.substring(randomPoz,randomPoz+1);
+    }
+    return randomString;
+}
+var randomValue = randomString(20, 'PICKCHARSFROMTHISSET');
+
+console.log(randomValue)
+*/
+///////////////////////////////////////////////////////////////
+
+/*
+// const characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
+// const generateKey = '';
+function generateKey(length, characters) {
+    characters = characters || 'abcdefghijklmnopqrstuvwxyz0123456789';
+    const generateKey = '';
+    for (let i = 0; i < length; i++) {
+        let randomPoz = Math.floor(Math.random() * characters.length);
+        generateKey += characters.substring(randomPoz, randomPoz + 1);
+    }
+    return generateKey;
+}
+
+const key = generateKey(16, characters);
+console.log(key); // eg599gb60q926j8i
+*/
+
+/*
+const characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
+function generateKey(length, characters) {
+
+    let randomString = '';
+
+    for (let i = 0; i < length; i++) {
+        const randomPoz = Math.floor(Math.random() * characters.length);
+        randomString += characters.substring(randomPoz, randomPoz + 1);
+    }
+    return randomString;
+};
+const key = generateKey(16, characters);
+
+console.log(key);
+*/
+
+/*
+function countDown (number) {
+
+    console.log(number)
+
+    const newNumber = number - 1;
+
+    if(newNumber > 0){
+        countDown(newNumber);
+    }
+};
+countDown(9);
+
+
+
+
+const arr = [2, 12, 34, 54, 41];
+function printArray (arr, i){
+    if(i >= arr.length){
+        return;
+    }
+    console.log(`Element at index ${i} is ${arr[i]}`);
+
+    printArray(arr, i + 1);
+}
+
+printArray(arr, 0);
+*/
+
+
+/*
+let ownArray = ['qwr', 'qwe', 'wqe', 'wqe', 'qwe', 'rew', 'ewtr', 'fbd', 'sdv', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'end'];
+let sum = 0;
+let count = 0;
+
+function calculateArr() {
+
+    for(let i = 0; i < ownArray.length; i++){
+
+        if (!isNaN(ownArray[i])) {
+            count += 1;
+            sum += ownArray[i];
+        }
+        // console.log(count);
+        // console.log(sum);
+    }
+    return  sum / count;
+
+}
+
+let result = calculateArr();
+// alert(result);
+
+console.log(isNaN('qwr'));
+console.log(Number('qwr'));
+*/
+
+
+/*
+function calculatorFun(x, znak, y) {
+    x = +prompt("Введите первое число");
+    znak = prompt("Введите операцию которую хотите совершить: +, -, *, /, %, ^ ");
+    y = +prompt("Введите второе число");
+    let result;
+
+    switch (znak) {
+        case "+":
+            result = x + y;
+            break;
+
+        case "-":
+            result = x - y;
+            break;
+
+        case "*":
+            result = x * y;
+            break;
+
+        case "/":
+            result = x / y;
+            break;
+
+        case "%":
+            result = x % y;
+            break;
+
+        case "^":
+            result = x ** y;
+            break;
+    }
+    return result;
+}
+let resultCalcFun = calculatorFun();
+alert(resultCalcFun);
+*/
+
+/*
+let arr = [];
+function arrAddArray() {
+    let amount1 = +prompt("Введите количество массивов в родительском массиве");
+
+    for (let i = 0; i < amount1; i++) {
+        arr.push([]);
+
+        let amount2 = prompt("Введите количество елементов в массиве: " + (i + 1));
+
+        for (let j = 0; j < amount2; j++) {
+            let elem = prompt("Введите значение элемента номер: " + (j + 1));
+            arr[i].push(elem);
+        }
+    }
+}
+arrAddArray();
+console.log(arr);
+*/
+
+
+
+
+
+
+/*
+function removeItemAll(arr, value) {
+    var i = 0;
+    while (i < arr.length) {
+        if (arr[i] === value) {
+            arr.splice(i, 1);
+        } else {
+            ++i;
+        }
+    }
+    return arr;
+}
+// Usage
+
+console.log(removeItemAll([2,5,9,1,5,8,5], 5))
+*/
+
+/*
+let str = prompt('Введите слово')
+let lettersToRemove = [];
+
+function filterLetters(str, lettersToRemove) {
+
+    let amount2 = prompt("Введите количество елементов в массиве: " );
+
+    for (let j = 0; j < amount2; j++) {
+        let elem = prompt("Введите значение элемента номер: " + (j + 1));
+        lettersToRemove.push(elem);
+    }
+
+    return str.split('').reduce((acc, current)=> {
+        if(lettersToRemove.indexOf(current.toLowerCase()) == -1){
+            acc.push(current);
+        }
+        return acc;
+    }, []).join('');
+}
+
+const strEnd = filterLetters(str, lettersToRemove);
+
+console.log(strEnd);
+*/
+
+
+/*
+function pow(x,n) {
+    if (n != 1) {
+        return x *= pow(x,n - 1);
+    } else {
+        return x;
+    }
+}
+alert( pow(2,3)); // 8
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
