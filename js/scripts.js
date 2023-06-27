@@ -1421,62 +1421,338 @@ alert( pow(2,3)); // 8
 */
 
 
+/*
+function funAdditions () {
+    let val = 0;
+    return function (x) {
+        val += x;
+        return val;
+    }
+}
+let sum = funAdditions();
+console.log(sum(3));
+console.log(sum(5));
+console.log(sum(20));
+
+
+let sumSecond = funAdditions();
+console.log(sumSecond(20));
+console.log(sumSecond(5));
+console.log(sumSecond(3));
+*/
+
+
+/*
+let ladder = {
+    step: 0,
+    up: function () {
+        this.step++;
+        return this;
+    },
+    down: function () {
+        this.step--;
+        return this;
+    },
+    showStep: function () { // показывает текущую ступеньку
+        alert(this.step);
+        return this;
+    }
+};
+
+// ladder.up();
+// ladder.up();
+// ladder.down();
+// ladder.showStep(); // 1
+
+ladder.up().up().down().showStep(); // 1
+
+ladder.up().up().down().showStep().down().down().down().showStep(); // 2 // -1
+*/
+
+
+
+/*
+const x = {
+    y: 12,
+};
+Object.prototype.sayHello = function (){
+    console.log('Hello')
+}
+
+console.log(Object.prototype)
+console.log(x.sayHello())
+console.log(x)
+*/
+
+// const y = {
+//     hello: 'Hello1',
+// };
+//
+// const x = {
+//
+// };
+//
+// Object.setPrototypeOf(x, y)
+// console.log(Object.getPrototypeOf(x))
+// console.log(x)
+
+
+
+// const utils = {
+//     hello: () => console.log('hello'),
+//     bye: () => console.log('bye')
+// };
+//
+// const x1 = {};
+//
+// Object.setPrototypeOf(x1, utils)
+// console.log(x1)
+
+
+
+/*
+function Person(name, age, gender) {
+    this.name = name;
+    this.age = age;
+    this.gender = gender;
+
+    this.greet = function (){
+        return `Hi ${this.name}`
+    }
+    this.bye = function (){
+        console.log(this.name + 'bye')
+    }
+}
+
+
+const person1 = new Person('John', 23, 'male');
+const person2 = new Person('Toma', 27, 'female')
+
+console.log(person1, person2)
+
+const greeting1 = person1.greet();
+const greeting2 = person2.greet();
+console.log(greeting1, greeting2 )
+
+
+
+function Student (name, age, gender) {
+    Person.call(this, name, age, gender);
+
+    this.showHand = function (){
+        console.log(`that ${this.name} hard`)
+    }
+    this.bye = function (){
+        console.log(`that student bye`)
+    }
+}
+
+const student = new Student('John1', '222', 'malee')
+
+console.log(student)
+
+student.greet()
+student.showHand()
+student.bye()
+
+console.log(person1.bye())
 
 
 
 
+class Person5 {
+    constructor(name) {
+        this.name = name;
+    }
+
+    greet(){
+        console.log(`hello ${this.name}`)
+    }
+}
+
+class Student5 extends Person5 {
+    constructor(name) {
+        super(name);
+    }
+}
+
+const person5 = new Person5('Tom')
+const student5 = new Student5('John')
+
+console.log(person5)
+console.log(student5)
+
+
+
+class Animals{
+    constructor(name) {
+        this.name = name;
+    }
+
+    animalName(){
+        return `${this.name}`
+    }
+    greet(){
+        return alert(`Hello I am ${this.name}`)
+    }
+}
+
+const animal = new Animals('Bob')
+const animal2 = new Animals('Bob2')
+const animal3 = new Animals('Bob3')
+const animal4 = new Animals('Bob4')
+
+
+console.log(animal)
+console.log(animal.animalName())
+console.log(animal2.animalName())
+console.log(animal3.animalName())
+console.log(animal4.animalName())
+
+class Pets extends Animals {
+    constructor(name, type) {
+        super(name);
+
+        this.type = type;
+    }
+    getPetType(){
+        return this.type;
+    }
+}
+
+const cat = new Pets('jack', 'cat')
+console.log(cat.getPetType())
+
+
+class Animals2 {
+    constructor(name) {
+        this.name = name;
+    }
+
+    getName(){
+        return `${this.name}`;
+    }
+
+    setName(name){
+        return (this.name = name)
+    }
+}
+
+const cat2 = new Animals2('jack')
+
+console.log(cat2.getName())
+
+cat2.setName('bob')
+
+console.log(cat2.getName())
+
+
+*/
 
 
 
 
+/*
+var people = [];
+
+function Person(name, age){  // Function constructor
+    this.name = name;          // do not forget 'this.'
+    this.age = age;
+}
+
+function addPerson(name,age){
+    var p = new Person(name,age); // here we create instance
+    people.push(p);
+}
+console.log(people);
+
+addPerson("Petia", 80);
+addPerson("Vasia", 20);
+
+
+function totalAge(){
+    var total = 0;      // do not name local variables same as function
+    var i;             // use var for i variable, otherwise it would be global variable
+    for (i = 0; i < people.length; i++){
+        total += people[i];
+    }
+    return total;
+}
+
+var total = totalAge();
+console.log(total);
+*/
+
+
+class Shape {
+    area() {
+        return 0;
+    }
+
+    perimeter() {
+        return 0;
+    }
+
+    toString() {
+        return Object.getPrototypeOf(this).constructor.name;
+    }
+}
+
+
+class Circle extends Shape {
+    constructor(r) {
+        super();
+        this.radius = r;
+    }
+
+    area() {
+        return Math.PI * this.radius ** 2;
+    }
+
+    perimeter() {
+        return Math.PI * this.radius * 2;
+    }
+}
+
+
+class Rectangle extends Shape {
+    constructor(w, h) {
+        super();
+        this.width = w;
+        this.height = h;
+    }
+
+    area() {
+        return this.width * this.height;
+    }
+
+    perimeter() {
+        return 2 * (this.width * this.height)
+    }
+}
+
+const shapes = [new Circle(3), new Rectangle(2, 3)]
+
+console.log(shapes)
 
 
 
+function cumulateShapes (shapes){
 
+    return shapes.reduce((sum, shape) => {
+        if (shape instanceof Shape) {
+            console.log(`Shape: ${shape.toString()} - area: ${shape.area()}`);
+            console.log(`Shape: ${shape.toString()} - perimeter: ${shape.perimeter()}`);
 
+            return sum + shape.area();
+        }
 
+        console.log(`Bad argument shape.`)
 
+    }, 0);
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(cumulateShapes(shapes));
 
 
 
